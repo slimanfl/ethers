@@ -1,8 +1,8 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  const Message = await ethers.getContractFactory("message");
-  const message = await Message.deploy();
+  const Message = await ethers.getContractFactory("Message");
+  const message = await Message.deploy("hellow suliman");
   await message.waitForDeployment();
   console.log("deployed contract adress:", `${message.getAddress()}`);
 }
